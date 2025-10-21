@@ -20,5 +20,5 @@ print(f"only in optional names: {only_in_optional}, type: {type(only_in_optional
 frozenset_names = frozenset(["Grace", "Heidi", "Ivan"])
 print(f"frozenset names: {frozenset_names}, type: {type(frozenset_names)}")
 
-frozenset_names.add("Judy")  # This will raise an AttributeError as frozensets are immutable
+#frozenset_names.add("Judy")  # This will raise an AttributeError as frozensets are immutable
 print(f"frozenset names after add: {frozenset_names}")

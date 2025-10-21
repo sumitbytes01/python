@@ -13,7 +13,7 @@ print(f"last character: {nice_string[-1]}")
 
 print(f"substring: {nice_string[1:3]}")
 
-print(f"substring with skip: {nice_string[1:10:2]}")
+print(f"substring with skip: {nice_string[1:20:2]}")
 
 multiline_string = """this is a multiline string
 i can write anything here
@@ -37,7 +37,7 @@ print(f"upper string: {upper_string}, type: {type(upper_string)}")
 lower_string = nice_string.lower()
 print(f"lower string: {lower_string}, type: {type(lower_string)}")
 
-split_string = nice_string.split(" ")
+split_string = nice_string.split(" ") # list
 print(f"split string: {split_string}, type: {type(split_string)}")
 
 joined_string = " ".join(split_string)

@@ -5,11 +5,10 @@ student_name = "Sumit"
 print(f"student marks: {student_marks}, type: {type(student_marks)}")
 
 random_calculation = student_marks / student_age
-print(f"random calculation: {random_calculation}, type: {type(random_calculation)}")
+print(f"random calculation student_marks / student_age : {random_calculation}, type: {type(random_calculation)}")
 
 random_calculation_remainder = student_marks % student_age
-print(f"random calculation: {random_calculation_remainder}, type: {type(random_calculation_remainder)}")
-
+print(f"random calculation student_marks % student_age : {random_calculation_remainder}, type: {type(random_calculation_remainder)}")
 
 scaled_factor = 4
 number = 2

@@ -1,0 +1,64 @@
+Python basics about language
+python class example - write the basic class, add some methods, use __init__ to initialise the class. 
+    create some objects of the class and call some methods of the class.
+
+Installing python on machine.
+    using the shell from python website. python.org
+
+Install python. python3 --version
+    exit 
+    you can perform operations on terminal. import sys. print(sys.version)
+
+Difference between import and from:
+    import module imports the entire module as a namespace, You then access functions or variables with module.name
+        import math
+        print(math.sqrt(16))
+
+    from module import name imports specific functions, classes, or variables directly into your current namespace, so you can use them without the module prefix:
+        from math import sqrt
+        print(sqrt(16))
+
+    import keeps the module’s contents organized under its name, which avoids name conflicts.
+    from ... import: makes code shorter by not requiring to type the module name repeatedly, useful when using a specific function or class often.
+    Using from module import * imports everything from the module into your namespace, which can cause name clashes and reduce readability, so it is generally discouraged.
+
+if a folder have __init__.py file in it, it is a package
+else it is a module
+rest are just files etc 
+
+PEP8 python guidelines
+
+virtual environment - 
+    python 3 -m venv .venv
+    source .venv/bin/activate
+    (.venv)
+to bring in 3rd part modules - pip install requests, etc
+    requirements.txt -  better approach
+        pip install -r requirements.txt
+
+always work in venv(virtual environment)
+
+deactivate - to deactivate the venv
+
+this was the traditional way of using virtual environment
+    new way is UV way
+
+Data Types:
+Mutable and immutable data types
+    Mutable: list, dictionary, set
+    Immutable: intergers, float, string, tupple, frozen set
+
+creating a tupple: ()
+creating a set: set(), or {value1, value2}. not like {}, as it created a dictionary
+    Sets can contain mixed data types, but the elements must be immutable.
+        Sets in Python are mutable collections, meaning you can add or remove elements after creating the set. However, the elements inside a set must be immutable. This requirement exists because Python sets use a hash-based data structure internally to ensure uniqueness and allow efficient lookup. Only immutable objects have a stable hash value, which doesn’t change over their lifetime. If a set allowed mutable elements like lists or dictionaries, their hash values could change when the object is modified, breaking the integrity of the set’s internal structure and causing unpredictable behavior.
+        A set needs its elements to have a fixed, unchanging hash value to maintain internal consistency.
+
+simple operations in python: +, -, *, /, **, //
+
+Tupple deep dive, some operations
+List(Arrsy) deep dive, some operations
+operator overloading
+bytearray
+
+

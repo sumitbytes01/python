@@ -4,7 +4,6 @@ print(f"Type of order amount, type:{type(order_amount)}")
 delivery_fees = 0
 if order_amount>500:
     print("Delivery is free:)")
-    delivery_fees = 0
 else:
     print("Delivery fee is 30$")
     delivery_fees = 30

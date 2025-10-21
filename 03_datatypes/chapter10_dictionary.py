@@ -1,4 +1,4 @@
-# dictionary, named indexing
+# dictionary, named based indexing
 dict1 = {'name': 'Alice', 'age': 30, 'city': 'New York'}
 dict2 = dict(name='Bob', age=25, city='Los Angeles')
 print(dict1['name'])  # Output: Alice
@@ -19,4 +19,5 @@ last_item = dict1.popitem()
 print(last_item)  # Output: ('city', 'New York')
 print(dict1)      # Output: {'name': 'Alice'}
 
+# getting item, value safely
 print(dict1.get("note"))

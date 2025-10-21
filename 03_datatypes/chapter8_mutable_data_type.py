@@ -1,4 +1,5 @@
-# List (array) is a mutable data type in Python, meaning that its contents can be changed after it is created. 
+# List (array) is a mutable data type in Python, meaning that its contents can be changed after 
+# it is created. 
 # Here are some key points about lists:
 student_names = ["Alice", "Bob", "Charlie"]
 
@@ -8,12 +9,12 @@ print(f"student names after append: {student_names}, type: {type(student_names)}
 
 poped_student = student_names.pop()  # Removing the last element from the list
 print(f"poped student: {poped_student}")
-print(f"student names after append: {student_names}, type: {type(student_names)}")
+print(f"student names after pop: {student_names}, type: {type(student_names)}")
 
 student_names.remove("Alice")  # Removing a specific element from the list
 
 
-print(f"student names after append: {student_names}, type: {type(student_names)}")
+print(f"student names after removing Alice: {student_names}, type: {type(student_names)}")
 
 student_names_1 = ["David", "Eve"]
 student_names_2 = ["Frank", "Grace"]
