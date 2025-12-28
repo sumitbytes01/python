@@ -8,6 +8,7 @@ else:
     print("Delivery fee is 30$")
     delivery_fees = 30
 
+# ternary operator
 delivery_fees = 0 if order_amount>500 else 30
 
 print(f"Delivery fees: {delivery_fees}$")

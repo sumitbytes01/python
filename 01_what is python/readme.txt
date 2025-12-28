@@ -16,3 +16,4 @@ dynamically typed - variables type are determined at runtime
 supports multiple inheritance
 concise and readable
 The Global Interpreter Lock (GIL) in CPython limits true parallel threads for CPU-bound tasks
+

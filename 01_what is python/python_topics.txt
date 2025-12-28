@@ -27,6 +27,7 @@ else it is a module
 rest are just files etc 
 
 PEP8 python guidelines
+    import this
 
 virtual environment - 
     python 3 -m venv .venv
@@ -34,7 +35,7 @@ virtual environment -
     (.venv)
 to bring in 3rd part modules - pip install requests, etc
     requirements.txt -  better approach
-        pip install -r requirements.txt
+        pip install -r requirements.txt - install all modules defined in requirements.txt
 
 always work in venv(virtual environment)
 
@@ -51,14 +52,158 @@ Mutable and immutable data types
 creating a tupple: ()
 creating a set: set(), or {value1, value2}. not like {}, as it created a dictionary
     Sets can contain mixed data types, but the elements must be immutable.
-        Sets in Python are mutable collections, meaning you can add or remove elements after creating the set. However, the elements inside a set must be immutable. This requirement exists because Python sets use a hash-based data structure internally to ensure uniqueness and allow efficient lookup. Only immutable objects have a stable hash value, which doesn’t change over their lifetime. If a set allowed mutable elements like lists or dictionaries, their hash values could change when the object is modified, breaking the integrity of the set’s internal structure and causing unpredictable behavior.
+        Sets in Python are mutable collections, meaning you can add or remove elements after creating the set. 
+        However, the elements inside a set must be immutable. This requirement exists because Python sets use a hash-based data structure internally to ensure uniqueness and allow efficient lookup. 
+        Only immutable objects have a stable hash value, which doesn’t change over their lifetime. 
+        If a set allowed mutable elements like lists or dictionaries, their hash values could change when the object is modified, breaking the integrity of the set’s internal structure and causing unpredictable behavior.
         A set needs its elements to have a fixed, unchanging hash value to maintain internal consistency.
+
+my_list = [1, 2, 3, 4]
+my_tuple = (1, 2, 3)
+my_set = {1, 2, 3}
+my_dict = {"name": "Sumit", "age": 35}
+
+Quick Comparison Table
+Type	Ordered	Mutable	Duplicates
+List	Yes	    Yes	    Yes
+Tuple	Yes	    No	    Yes
+Set	    No	    Yes  	No
+Dictionary	Yes	Yes	    Keys: No
 
 simple operations in python: +, -, *, /, **, //
 
 Tupple deep dive, some operations
-List(Arrsy) deep dive, some operations
+List(Array) deep dive, some operations
 operator overloading
 bytearray
 
+conditions : if, else, elif, match and case
 
+loops: 
+for, for-else
+enumerate
+zip
+while
+continue break
+Walrus
+
+functions
+    reducing code duplication
+    scope and name resolution
+    local - inside a function
+    Enclosing from outer function if nested
+    global - top level script
+    nonlocal
+    built in function
+    *args and **kwargs - ingredients, spices. direct values and key value pair.
+    return
+        one value
+        multiple values
+        return early from the function
+    Type of functions  
+        pure and impure
+        recursive function
+        lambda
+    built-in function
+
+Comprehensions- concise way to create list, 
+                sets, dictionaries, or generators in python using a single line of code.
+    Where are they used:
+        filtering items
+        with cleaner code
+        faster execution
+    Type of comprehensions:
+        list, set, dict, generator
+
+    [expression for item in oterable if conditions] list
+    {expression for item in oterable if conditions} set
+    {expression for item in oterable if conditions} dictionary
+    (expression for item in oterable if conditions) generators, like a , one item at a time,        performance and memory improvement
+
+    Generators
+        you save memory
+        dont want result immidiately
+        lazy evaluation
+
+        Yield
+            yield in Python is used to create a generator — a special kind of function that returns values one at a time, instead of all at once.
+            Think of it as “pause and resume” rather than “return and stop”.
+
+| `return`                                     |   `yield`                                      |
+| -------------------------------------------- | ---------------------------------------------- |
+| Sends back a value and **ends** the function | Sends back a value and **pauses** the function |
+| Function runs once                           | Function resumes where it left off             |
+| Stores all results in memory                 | Generates values **on demand**                 |
+
+def big_numbers():
+    for i in range(1_000_000):
+        yield i
+This does not store 1 million numbers in memory.
+
+Infinite generators
+send generators
+Yield from
+closing generators
+
+Decorators
+    primary agenda - decoration
+    wrapper around your function
+    @decorator_function
+    @wraps()
+    using *args, **kwargs in decorators
+    decorator returning a value
+    logging decorator
+    autorization decorator
+
+OOPS:
+    class
+    named space
+        adding new variable to class and adding to object of class.
+    attribute shadowing . fallback to class variables.
+    self argument
+    init function
+    Class properties
+    Inheritance
+    accessing base class
+    MRO - Method Resolution Order
+    static methods
+    class methods, @classmethod, cls
+    dunder __dict__
+    class properties, setter getters
+Exception handling
+    try, except, else, finally, raise
+    Multiple exceptions
+    Custom Exception
+    File handling
+    # KeyError
+    # ZeroDivisionError
+    # TypeError
+    # NameError
+    # IndexError
+
+Concurrency & Parallelism
+    Concurrency(context switching) - multiple tasks at once
+        threading.Thread
+        asyncio
+    Parallelism
+        mulitiprocessing.Process
+        concurrent.futures.ProcessPoolExecutor
+    pros and cons of concurrency and Parallelismwhen to use what
+    sleep
+    join
+    process
+    GIL - Global Interpreter Lock
+        mutex - lock
+    where are threads effective ? I/O bound opearations (disk read write/ web requests)
+    global lock
+    what is : from multiprocessing import Value. how does it changes how counter behaves.
+
+asyncio
+    async def   declare a coroutine
+    await - pause execution until the result is ready
+    Event loop - engine that runs and schedule co-routine in 
+    asyncio.sleep(2) vs time.sleep()
+    blocking vs non-blocking
+    daemon threads
+    pyspy
+    vprof

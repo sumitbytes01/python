@@ -1,3 +1,7 @@
+# self → object
+# cls → class
+# staticmethod → logic only
+
 class Student:
     def __init__(self, name, age, roll_number):
         self.name = name
@@ -18,5 +22,6 @@ student1 = Student("Alice", 20, 101)
 student1.display_info()
 student2 = Student.create_new_student("Bob", 22, 102)
 student2.display_info()
-student1 = Student(name="Sumit", age=37, roll_number=142)
+student3 = Student(name="Sumit", age=37, roll_number=142)
+student3.display_info()
 

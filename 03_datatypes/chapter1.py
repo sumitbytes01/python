@@ -10,4 +10,8 @@ print(type(sugar_amount))
 
 print(f"id of 2:{id(2)}")
 print(f"id of 5:{id(5)}")
+a = 2
+b = 5
+print(f"id of 2:{id(2)}")
+print(f"id of 5:{id(5)}")
 print(f"id of sugar_amount:{id(sugar_amount)}")

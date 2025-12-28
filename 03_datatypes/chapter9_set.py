@@ -2,9 +2,11 @@
 essential_names = {"Alice", "Bob", "Charlie"}
 optional_names = {"David", "Eve", "Frank", "Bob"}
 
+# union
 all_names = essential_names | optional_names
 print(f"all names: {all_names}, type: {type(all_names)}")
 
+# intersection
 common_names = essential_names & optional_names
 print(f"common_names: {common_names}, type: {type(common_names)}")
 
