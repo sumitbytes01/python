@@ -16,5 +16,5 @@ cart_data = {
     "item": ["Laptop", "Keyboard", "Mouse"],
     "quantities": {"Laptop": 1, "Keyboard":2, "Mouse":1}
 }
-cart_data = Cart(**cart_data)
+cart_data = Cart(**cart_data) # spread cart data
 print(cart_data)

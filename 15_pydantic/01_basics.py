@@ -19,9 +19,9 @@ input_data2= {
 user = User(**input_data)
 print(user)
 
-user2 = User(**input_data2)
-print(user2)
+# user2 = User(**input_data2)
+# print(user2)
 
-user1 = User(**input_data1)
-print(user1)
+# user1 = User(**input_data1)
+# print(user1)
 

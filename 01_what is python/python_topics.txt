@@ -207,3 +207,9 @@ asyncio
     daemon threads
     pyspy
     vprof
+
+Pydantic
+    Data validation and Setting Management
+    always use type annotation: int, float, str, bool etc
+    set sensible defaults
+    pydantic and typing
